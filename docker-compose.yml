@@ -15,7 +15,7 @@ services:
             - APPINSIGHTS_INSTRUMENTATIONKEY
         expose:
             - 80
-    myredis:
+
         image: redis
         expose:
             - 6379
