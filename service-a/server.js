@@ -29,4 +29,5 @@ app.get('/', function (req, res) {
 var port = 80;
 app.listen(port, function () {
     console.log('Listening on port ' + port);
+    return new Error('ERROR!!!');
 });
