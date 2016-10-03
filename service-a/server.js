@@ -17,7 +17,7 @@ app.use(morgan("dev"));
 app.get('/api', function (req, res) {
     // Invoke service-b
     request('http://service-b', function (error, response, body) {
-         res.send('Hello BLAH from service A running on ' + os.hostname() + ' and ' + body);
+         res.send('Hello from service A running on ' + os.hostname() + ' and ' + body);
     });
 });
 
@@ -29,5 +29,5 @@ app.get('/', function (req, res) {
 var port = 80;
 app.listen(port, function () {
     console.log('Listening on port ' + port);
-    return new Error('ERROR!!!');
+    throw new Error('Some error');
 });
