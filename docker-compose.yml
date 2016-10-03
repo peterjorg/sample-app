@@ -8,7 +8,8 @@ services:
             - "8080:80"
         links:
             - service-b
-
+        labels:
+            - com.microsoft.azure.public.port
     service-b:
         build: ./service-b
         environment:
